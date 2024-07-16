@@ -59,3 +59,30 @@ score
 stack=[]
 stack[-1:][0]
 # %%
+a = 'a'
+b = 'b'
+if x < y:
+    x, y = y, x
+    a, b = b, a
+acount = 0
+bcount = 0 
+score = 0 
+for c in s: 
+    if c == a:
+        acount += 1
+    elif c == b:
+        if acount:
+            score += x
+            acount -= 1
+        else:
+            bcount += 1
+    else:
+        score += min(acount,bcount) * y
+        acount = 0
+        bcount = 0
+score += min(acount,bcount) * y
+
+score
+
+
+# %%
